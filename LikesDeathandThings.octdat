@@ -1,0 +1,131 @@
+//LIKES DEATH and most things. Feel free to join my discord at discord.gg/antjpcNNb4 - I will add NF channels in the coming days like my other channels.
+{
+
+{
+    id Oct.Information.MoralInteraction.AllowedDeath
+    type MoralInteractionType
+    
+    grammar = 
+    {
+        type GrammarResultsNode
+        results =
+        [
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> allowed <Oct.Grammar.Noun.Third.Generic where grammar.noun=grammar.interactee> to die.
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> allowed <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> death.
+            <Oct.Grammar.Noun.Is.Generic where grammar.noun=grammar.interacter> culpable in <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> death.
+            <Oct.Grammar.Noun.Is.Generic where grammar.noun=grammar.interacter> responsible for <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> death.
+            <Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> did not prevent <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> death.
+            <Oct.Grammar.Noun.Third.Generic where grammar.noun=grammar.interacter> died on <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> watch.
+        ]
+    }
+    
+    morality = .375
+    benefit = .625
+    verb = allowed death of
+}
+{
+    id Oct.Information.MoralInteraction.Imprisoned
+    type MoralInteractionType
+    
+    morality = .5
+    benefit = .75
+    verb = imprisoned
+}
+{
+    id Oct.Information.MoralInteraction.HandedOver
+    type MoralInteractionType
+    
+    morality = .25
+    benefit = 1
+    
+    grammar = 
+    {
+        type GrammarResultsNode
+        results =
+        [
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> handed <Oct.Grammar.Noun.Third.Generic where grammar.noun=grammar.interactee> over to {opposee.kingdom}.
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> extradited <Oct.Grammar.Noun.Third.Generic where grammar.noun=grammar.interactee> to {opposee.kingdom}.
+        ]
+    }
+    
+    verb = extradited
+}
+{
+    id Oct.Information.MoralInteraction.Exhumed
+    type MoralInteractionType
+    
+    grammar = 
+    {
+        type GrammarResultsNode
+        results =
+        [
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> exhumed <Oct.Grammar.Noun.Third.Generic where grammar.noun=grammar.interactee>.
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> exhumed <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> corpse.
+        ]
+    }
+    
+    morality = 1
+    benefit = 1
+    verb = exhumed
+}
+{
+    id Oct.Information.MoralInteraction.Butchered
+    type MoralInteractionType
+    
+    grammar = 
+    {
+        type GrammarResultsNode
+        results =
+        [
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> butchered <Oct.Grammar.Noun.Third.Generic where grammar.noun=grammar.interactee>.
+            ^<Oct.Grammar.Noun.First.Generic where grammar.noun=grammar.interacter> butchered <Oct.Grammar.Noun.Posessive.Generic where grammar.noun=grammar.interactee> corpse.
+        ]
+    }
+    
+    modifiers =
+    [
+        {
+            type HighestProductOfOpinionMoralInteractionModifier
+        }
+    ]
+    
+    crisis = <Oct.Crisis.ButcherFriendly>
+    
+    morality = 1
+    benefit = 1
+    verb = butchered
+}
+{
+    id Oct.Information.MoralInteraction.Murdered
+    type MoralInteractionType
+    
+    morality = 1.5
+    benefit = 1.5
+    verb = murdered
+}
+{
+    // during war
+    id Oct.Information.MoralInteraction.Killed
+    type MoralInteractionType
+    
+    morality = .25
+    benefit = 1
+    empathy = .125
+    verb = killed
+}
+{
+    id Oct.Information.MoralInteraction.TookBelonging
+    type MoralInteractionType
+    
+    morality = 0
+    benefit = .125
+    verb = took a belonging from
+}
+{
+    id Oct.Information.MoralInteraction.Captured
+    type MoralInteractionType
+    
+    morality = .125
+    benefit = 1
+    verb = captured
+}
