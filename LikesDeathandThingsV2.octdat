@@ -1,0 +1,134 @@
+//LIKES DEATH and most things. Feel free to join my discord at discord.gg/antjpcNNb4 - I will add NF channels in the coming days like my other channels.
+{
+
+    id Oct.Information.MoralInteraction.AllowedDeath
+    type MoralInteractionType
+    morality = .375
+    benefit = .625
+    verb = allowed death of
+}
+{
+    id Oct.Information.MoralInteraction.Imprisoned
+    type MoralInteractionType
+    morality = .5
+    benefit = .75
+}
+{
+    id Oct.Information.MoralInteraction.HandedOver
+    type MoralInteractionType
+    
+    morality = .25
+    benefit = 1
+}
+{
+    id Oct.Information.MoralInteraction.Exhumed
+    type MoralInteractionType
+	morality = 1
+    benefit = 1
+    verb = exhumed
+}
+{
+    id Oct.Information.MoralInteraction.Butchered
+    type MoralInteractionType
+    morality = 1
+    benefit = 1
+    verb = butchered
+}
+{
+    id Oct.Information.MoralInteraction.Murdered
+    type MoralInteractionType
+    
+    morality = 1.5
+    benefit = 1.5
+    verb = murdered
+}
+{
+    // during war
+    id Oct.Information.MoralInteraction.Killed
+    type MoralInteractionType
+    
+    morality = .25
+    benefit = 1
+    empathy = .125
+    verb = killed
+}
+{
+    id Oct.Information.MoralInteraction.TookBelonging
+    type MoralInteractionType
+    
+    morality = 0
+    benefit = .125
+    verb = took a belonging from
+}
+{
+    id Oct.Information.MoralInteraction.Captured
+    type MoralInteractionType
+    
+    morality = .125
+    benefit = 1
+    verb = captured
+}
+//UPDATE PAST HERE
+	
+	
+	{
+	id Oct.Information.MoralInteraction.Buried
+    type MoralInteractionType
+	morality = 0
+    benefit = 1
+    empathy = 1
+    verb = buried
+}
+{
+    id Oct.Information.MoralInteraction.TookBelonging
+    type MoralInteractionType
+    
+    morality = 0
+    benefit = .125
+    verb = took a belonging from
+}
+{
+    id Oct.Information.MoralInteraction.Punished
+    type MoralInteractionType
+    
+    morality = .25
+    benefit = .25
+    verb = punished
+}
+{
+    id Oct.Information.MoralInteraction.AttemptedToImprison
+    type MoralInteractionType
+    
+    morality = -.25
+    benefit = -.5
+    verb = attempted to imprison
+}
+{
+    id Oct.Information.MoralInteraction.StartedFight
+    type MoralInteractionType
+    
+    morality = .375
+    benefit = .375
+    verb = started a fight with
+}
+{
+    id Oct.Information.MoralInteraction.AllowedDeath
+    type MoralInteractionType
+    morality = .375
+    benefit = .625
+}
+{
+    id Oct.Information.MoralInteraction.Exhumed
+    type MoralInteractionType
+    morality = 1
+    benefit = 1
+}
+//Ambushing was giving neg mood out the ASS for just telling someone to attack another, so this should make an evil playthrough more plausible.
+{
+    id Oct.Information.MoralInteraction.Ambushed
+    type MoralInteractionType
+    
+    morality = .5
+    benefit = .5
+}
+	
